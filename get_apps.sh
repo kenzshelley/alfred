@@ -11,8 +11,6 @@ then
   beyond-curl https://registry.sqprod.co/api/v1/user/mshelley.json > /tmp/alfred/mshelley.json
 fi
 
-# Make it so alfred can find python installed using pyenv
-eval "$(pyenv init --path)"
-
 # Hackily parse it to get my apps
-python /Users/mshelley/Development/alfred/get_apps.py /tmp/alfred/mshelley.json
+# Use homebrew python
+/opt/homebrew/opt/python/libexec/bin/python /Users/mshelley/Development/alfred/get_apps.py /tmp/alfred/mshelley.json
